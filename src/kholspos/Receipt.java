@@ -11,6 +11,9 @@ public class Receipt {
     private double total;
     private double tax;
     private double grandTotal;
+    private Product[] receiptList;
     
-    
+    public Receipt(){
+        
+    }
 }

@@ -10,13 +10,22 @@ package kholspos;
  * @author Kallie
  */
 public class percentageDiscount implements Discount{
+    private double discount;
+    private double itemPrice;
+    private double discountAmt;
+    public Product item;
     
     public percentageDiscount(Product item, double discount){
-        
+        this.discount = discount;
+        this.item = item;
+    }
+    
+    private void calculateDiscount(){
+        discount * item.getPrice() = discountAmt;
     }
     @Override
     public double getDiscountAmt(){
-        
-        return 0.0;
+        calculateDiscount();
+        return discountAmt;
     }
 }
