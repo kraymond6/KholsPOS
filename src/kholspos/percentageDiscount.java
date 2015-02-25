@@ -21,7 +21,7 @@ public class percentageDiscount implements Discount{
     }
     
     private void calculateDiscount(){
-        discount * item.getPrice() = discountAmt;
+     discountAmt = discount * item.getPrice();
     }
     @Override
     public double getDiscountAmt(){
