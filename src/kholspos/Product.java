@@ -8,14 +8,17 @@ package kholspos;
 public class Product {
     private String description;
     private double price;
+    private double discountedPrice;
     private String productId;
     private int qty;
+    private Discount discountType;
 
-    public Product(String description, double price, String productId, int qty){
+    public Product(String description, double price, String productId, int qty, Discount discountType){
         this.description = description;
         this.price = price;
         this.productId = productId;
         this.qty = qty;
+        this.discountType = discountType;
     }
     public String getDescription() {
         return description;
@@ -49,5 +52,14 @@ public class Product {
         this.qty = qty;
     }
     
+    public double getDiscountedPrice(){
+        discountedPrice = price - discountType.getDiscountAmt();
+        return discountedPrice;
+    }
     
+    @Override
+    //Add more to this later!
+    public String toString(){
+        return productId + " " + description + " " + price;
+    }
 }
