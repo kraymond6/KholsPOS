@@ -9,11 +9,13 @@ public class Product {
     private String description;
     private double price;
     private String productId;
+    private int qty;
 
-    public Product(String description, double price, String productId){
+    public Product(String description, double price, String productId, int qty){
         this.description = description;
         this.price = price;
         this.productId = productId;
+        this.qty = qty;
     }
     public String getDescription() {
         return description;
@@ -37,6 +39,14 @@ public class Product {
 
     public void setProductId(String productId) {
         this.productId = productId;
+    }
+
+    public int getQty() {
+        return qty;
+    }
+
+    public void setQty(int qty) {
+        this.qty = qty;
     }
     
     
