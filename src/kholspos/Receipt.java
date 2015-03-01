@@ -13,7 +13,12 @@ public class Receipt {
     private double grandTotal;
     private Product[] receiptList;
     
-    public Receipt(){
-        
+    public Receipt(String date, String custId){
+        this.date = date;
+        this.custId = custId;
+    }
+    
+    public void addItem(Product item){
+        //resize array to one larger and add item
     }
 }

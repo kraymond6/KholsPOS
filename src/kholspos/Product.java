@@ -7,9 +7,9 @@ package kholspos;
  */
 public class Product {
     private String description;
+    private String productId;
     private double price;
     private double discountedPrice;
-    private String productId;
     private int qty;
     private Discount discountType;
 
