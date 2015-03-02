@@ -21,4 +21,7 @@ public class CashRegister {
     public void addItem(Product item){
         receipt.addItem(item);
     }
+    public void endTransaction(){
+        
+    }
 }

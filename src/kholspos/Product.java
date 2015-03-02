@@ -60,6 +60,6 @@ public class Product {
     @Override
     //Add more to this later!
     public String toString(){
-        return productId + " " + description + " " + price;
+        return "ID " + productId + " Desc " + description + " Price " + price + " You paid " + getDiscountedPrice();
     }
 }

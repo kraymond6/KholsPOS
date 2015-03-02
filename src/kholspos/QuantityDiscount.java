@@ -12,17 +12,18 @@ package kholspos;
 public class QuantityDiscount implements Discount{
     private int qtyNeeded;
     private double discountAmt;
-    private Product item;
-    public QuantityDiscount(int qtyNeeded, double discountAmt){
+    private double itemPrice;
+    public QuantityDiscount(int qtyNeeded, double discountAmt, double itemPrice){
         this.qtyNeeded = qtyNeeded;
         this.discountAmt = discountAmt;
+        this.itemPrice = itemPrice;
     }
     
     @Override
     public double getDiscountAmt(){
-        if (qtyNeeded >= item.getQty())
-            return item.getPrice() * discountAmt;
+        if (qtyNeeded >= itemPrice)
+            return itemPrice * discountAmt;
         else
-            return item.getPrice();
+            return itemPrice;
     }
 }
