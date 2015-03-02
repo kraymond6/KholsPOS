@@ -1,6 +1,4 @@
 package kholspos;
-
-
 /**
  *
  * @author Kallie
@@ -22,6 +20,7 @@ public class CashRegister {
         receipt.addItem(item);
     }
     public void endTransaction(){
-        
+        System.out.println("Customer " + customerId + " Date " + date);
+        receipt.printItemList();
     }
 }

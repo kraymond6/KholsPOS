@@ -9,13 +9,6 @@ package kholspos;
  *
  * @author Kallie
  */
-public class NoDiscount implements Discount{
- 
-    public NoDiscount(){
-        
-    }
-    @Override
-    public double getDiscountAmt(){
-        return 0;
-    }
+public interface DatabaseAccessStrategy {
+    
 }

@@ -13,7 +13,8 @@ public class QuantityDiscount implements Discount{
     private int qtyNeeded;
     private double discountAmt;
     private double itemPrice;
-    public QuantityDiscount(int qtyNeeded, double discountAmt, double itemPrice){
+    private int itemQty;
+    public QuantityDiscount(int qtyNeeded, double discountAmt, int itemQty){
         this.qtyNeeded = qtyNeeded;
         this.discountAmt = discountAmt;
         this.itemPrice = itemPrice;
@@ -21,7 +22,7 @@ public class QuantityDiscount implements Discount{
     
     @Override
     public double getDiscountAmt(){
-        if (qtyNeeded >= itemPrice)
+        if (qtyNeeded >= itemQty)
             return itemPrice * discountAmt;
         else
             return itemPrice;

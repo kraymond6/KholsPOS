@@ -13,7 +13,7 @@ public class Product {
     private int qty;
     private Discount discountType;
 
-    public Product(String description, double price, String productId, int qty, Discount discountType){
+    public Product(String description, double price, String productId, Discount discountType){
         this.description = description;
         this.price = price;
         this.productId = productId;
@@ -58,7 +58,6 @@ public class Product {
     }
     
     @Override
-    //Add more to this later!
     public String toString(){
         return "ID " + productId + " Desc " + description + " Price " + price + " You paid " + getDiscountedPrice();
     }

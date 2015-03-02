@@ -31,5 +31,8 @@ public class Receipt {
             System.out.println(receiptList[i].toString());
             total += receiptList[i].getDiscountedPrice();
         }
+        tax = total * .051;
+        grandTotal = total + tax;
+        System.out.println("Total " + total + " Tax " + tax + " Grand Total " + grandTotal);
     }
 }
