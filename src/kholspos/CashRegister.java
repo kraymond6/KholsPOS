@@ -11,8 +11,7 @@ public class CashRegister {
  
     }
   
-    public void beginTransaction(String custId, String date){
-        customerId = custId;
+    public void beginTransaction(Customer cust, String date){
         this.date = date;
     }
     

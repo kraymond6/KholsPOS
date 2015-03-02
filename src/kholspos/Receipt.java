@@ -11,7 +11,7 @@ public class Receipt {
     private double total = 0;
     private double tax;
     private double grandTotal;
-    private Product[] receiptList = new Product[0];
+    private Product[] receiptList = new Product[1];
     
     public Receipt(String date, String custId){
         this.date = date;
@@ -21,15 +21,15 @@ public class Receipt {
     public void addItem(Product item){
        
         Product[] tempList = new Product[receiptList.length + 1];
-        System.arraycopy(receiptList, 0, tempList, 0, receiptList.length + 1);
-        tempList[receiptList.length] = item;
+        System.arraycopy(receiptList, 0, tempList, 0, receiptList.length);
         receiptList = tempList;
+        
     }
     
     public void printItemList(){
-        for (int i=0; i<receiptList.length; i++){
-            System.out.println(receiptList[i].toString());
-            total += receiptList[i].getDiscountedPrice();
+        for (Product receiptList1 : receiptList) {
+            System.out.println(receiptList1.toString());
+            total += receiptList1.getDiscountedPrice();
         }
         tax = total * .051;
         grandTotal = total + tax;

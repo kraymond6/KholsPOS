@@ -10,5 +10,6 @@ package kholspos;
  * @author Kallie
  */
 public interface DatabaseAccessStrategy {
-    
+    public Product findProduct(String productId);
+    public Customer findCustomer(String customerId);
 }
